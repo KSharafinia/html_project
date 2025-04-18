@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش HTML به زبان فارسی</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- فونت فارسی Vazir -->
+    <link href="https://cdn.jsdelivr.net/npm/vazir-font@32.102.2/dist/font-face.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Vazir', sans-serif;
+            font-family: 'Iranian Sans', sans-serif;
+        }
+        .example-code {
+            background-color: #212529;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            direction: ltr;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- منوی ناوبری -->
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">آموزش HTML</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#intro">معرفی</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#structure">ساختار HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#tags">تگ‌های HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#deprecated">تگ‌های منسوخ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- اطلاعات شخصی -->
+        <div class="container mt-4">
+            <div class="card bg-success text-white text-center mb-4">
+                <div class="card-body">
+                    <h3>طراحی توسط: خشایار حسنی</h3>
+                    <p>مهندسی کامپیوتر - دانشگاه آزاد نوشهر</p>
+                    <p>شماره دانشجویی: 123456</p>
+                    <p>استاد: قلی</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- محتوای اصلی -->
+    <div class="container mt-4">
+        <!-- معرفی -->
+        <div id="intro" class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">خوش آمدید به آموزش HTML</h2>
+                <p class="card-text">این وب‌سایت به شما کمک می‌کند تا با زبان HTML، پایه طراحی وب، آشنا شوید. HTML (زبان نشانه‌گذاری ابرمتن) برای ساختاردهی به محتوای وب استفاده می‌شود. اینجا ساختار یک فایل HTML، تگ‌های مهم، و ویژگی‌های آن‌ها را با مثال‌های ساده یاد می‌گیرید.</p>
+            </div>
+        </div>
+
+        <!-- بخش ساختار HTML -->
+        <div id="structure" class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">ساختار یک فایل HTML</h2>
+                <p>هر فایل HTML از بخش‌های زیر تشکیل شده است:</p>
+                <ul>
+                    <li><code><!DOCTYPE html></code>: مشخص می‌کند که این یک سند HTML5 است.</li>
+                    <li><code><html></code>: تگ اصلی که کل محتوا را در بر می‌گیرد.</li>
+                    <li><code><head></code>: شامل متادیتا مثل عنوان، کاراکترست، و لینک به فایل‌های CSS.</li>
+                    <li><code><body></code>: محتوای قابل مشاهده صفحه.</li>
+                </ul>
+                <h4>مثال:</h4>
+                <div class="example-code">
+                    <!DOCTYPE html><br>
+                    <html lang="fa"><br>
+                    <head><br>
+                      <meta charset="UTF-8"><br>
+                      <title>صفحه من</title><br>
+                    </head><br>
+                    <body><br>
+                      <h1>سلام، دنیا!</h1><br>
+                    </body><br>
+                    </html>
+                </div>
+                <h4>خروجی:</h4>
+                <div class="border p-2 bg-light rounded">
+                    <h1>سلام، دنیا!</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش تگ‌های HTML -->
+        <div id="tags" class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">تگ‌های مهم HTML</h2>
+                <p>در ادامه، تگ‌های پرکاربرد HTML را با مثال و ویژگی‌هایشان بررسی می‌کنیم:</p>
+
+                <!-- تگ p -->
+                <h4>تگ <code>&lt;p&gt;</code></h4>
+                <p>تگ <code>&lt;p&gt;</code> برای تعریف پاراگراف استفاده می‌شود. پاراگراف‌ها معمولاً برای ارائه متن‌های طولانی‌تر به کار می‌روند، مثل توضیحات یک موضوع یا بخشی از یک مقاله. این تگ به شما امکان می‌دهد محتوای متنی را به‌صورت منظم و خوانا نمایش دهید.</p>
+                <div class="example-code">
+                    <p>این وب‌سایت آموزشی به شما کمک می‌کند تا با زبان HTML آشنا شوید. HTML پایه و اساس طراحی وب است و یادگیری آن برای هر توسعه‌دهنده وب ضروری است. با HTML می‌توانید ساختار صفحات وب را به‌صورت حرفه‌ای طراحی کنید.</p>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <p>این وب‌سایت آموزشی به شما کمک می‌کند تا با زبان HTML آشنا شوید. HTML پایه و اساس طراحی وب است و یادگیری آن برای هر توسعه‌دهنده وب ضروری است. با HTML می‌توانید ساختار صفحات وب را به‌صورت حرفه‌ای طراحی کنید.</p>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا برای پاراگراف</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی با CSS</td>
+                        </tr>
+                        <tr>
+                            <td><code>style</code></td>
+                            <td>استایل مستقیم (مثل <code>style="color: blue;"</code>)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ h1-h6 -->
+                <h4>تگ <code>&lt;h1&gt;</code> تا <code>&lt;h6&gt;</code></h4>
+                <p>برای تعریف عنوان‌ها با اندازه‌های مختلف استفاده می‌شود. <code>&lt;h1&gt;</code> بزرگ‌ترین و <code>&lt;h6&gt;</code> کوچک‌ترین است.</p>
+                <div class="example-code">
+                    <h1>عنوان اصلی</h1><br>
+                    <h2>زیرعنوان</h2><br>
+                    <h3>زیرعنوان فرعی</h3>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <h1>عنوان اصلی</h1>
+                    <h2>زیرعنوان</h2>
+                    <h3>زیرعنوان فرعی</h3>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                        <tr>
+                            <td><code>align</code></td>
+                            <td>تراز متن (منسوخ‌شده، به جاش از CSS استفاده کنید)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ a -->
+                <h4>تگ <code>&lt;a&gt;</code></h4>
+                <p>برای ایجاد لینک به صفحات دیگر یا منابع استفاده می‌شود.</p>
+                <div class="example-code">
+                    <a href="https://www.example.com" target="_blank">برو به سایت نمونه</a>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <a href="https://www.example.com" target="_blank">برو به سایت نمونه</a>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>href</code></td>
+                            <td>آدرس لینک (مثل <code>https://example.com</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><code>target</code></td>
+                            <td>محل باز شدن لینک (مثل <code>_blank</code> برای تب جدید)</td>
+                        </tr>
+                        <tr>
+                            <td><code>title</code></td>
+                            <td>توضیحی که هنگام هاور نمایش داده می‌شود</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ img -->
+                <h4>تگ <code>&lt;img&gt;</code></h4>
+                <p>برای نمایش تصاویر در صفحه استفاده می‌شود.</p>
+                <div class="example-code">
+                    <img src="https://via.placeholder.com/150" alt="تصویر نمونه" width="150">
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <img src="https://via.placeholder.com/150" alt="تصویر نمونه" width="150">
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>src</code></td>
+                            <td>آدرس تصویر</td>
+                        </tr>
+                        <tr>
+                            <td><code>alt</code></td>
+                            <td>متن جایگزین برای دسترسی‌پذیری</td>
+                        </tr>
+                        <tr>
+                            <td><code>width</code>, <code>height</code></td>
+                            <td>ابعاد تصویر (توصیه: از CSS استفاده کنید)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ div -->
+                <h4>تگ <code>&lt;div&gt;</code></h4>
+                <p>برای گروه‌بندی محتوا و ایجاد بخش‌های مختلف در صفحه استفاده می‌شود.</p>
+                <div class="example-code">
+                    <div style="background-color: #f0f0f0; padding: 10px;"><br>
+                      این یک بخش است.<br>
+                    </div>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <div class="p-2 bg-light">این یک بخش است.</div>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                        <tr>
+                            <td><code>style</code></td>
+                            <td>استایل مستقیم</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ ul/ol -->
+                <h4>تگ <code>&lt;ul&gt;</code> و <code>&lt;ol&gt;</code></h4>
+                <p>برای ایجاد لیست‌های نامرتب (<code>&lt;ul&gt;</code>) یا مرتب (<code>&lt;ol&gt;</code>) استفاده می‌شود.</p>
+                <div class="example-code">
+                    <ul><br>
+                      <li>مورد اول</li><br>
+                      <li>مورد دوم</li><br>
+                    </ul><br>
+                    <ol><br>
+                      <li>گام اول</li><br>
+                      <li>گام دوم</li><br>
+                    </ol>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <ul>
+                        <li>مورد اول</li>
+                        <li>مورد دوم</li>
+                    </ul>
+                    <ol>
+                        <li>گام اول</li>
+                        <li>گام دوم</li>
+                    </ol>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                        <tr>
+                            <td><code>type</code> (برای <code>&lt;ol&gt;</code>)</td>
+                            <td>نوع شماره‌گذاری (مثل <code>1</code>، <code>a</code>)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ table -->
+                <h4>تگ <code>&lt;table&gt;</code></h4>
+                <p>برای نمایش داده‌ها به‌صورت جدول استفاده می‌شود.</p>
+                <div class="example-code">
+                    <table border="1"><br>
+                      <tr><br>
+                        <th>نام</th><br>
+                        <th>سن</th><br>
+                      </tr><br>
+                      <tr><br>
+                        <td>علی</td><br>
+                        <td>25</td><br>
+                      </tr><br>
+                    </table>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>نام</th>
+                            <th>سن</th>
+                        </tr>
+                        <tr>
+                            <td>علی</td>
+                            <td>25</td>
+                        </tr>
+                    </table>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                        <tr>
+                            <td><code>border</code></td>
+                            <td>ضخامت حاشیه (توصیه: از CSS استفاده کنید)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ form -->
+                <h4>تگ <code>&lt;form&gt;</code></h4>
+                <p>برای ایجاد فرم‌های تعاملی مثل فرم تماس استفاده می‌شود.</p>
+                <div class="example-code">
+                    <form><br>
+                      <label for="name">نام:</label><br>
+                      <input type="text" id="name" name="name"><br>
+                      <button type="submit">ارسال</button><br>
+                    </form>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <form>
+                        <label for="name">نام:</label><br>
+                        <input type="text" id="name" name="name" class="form-control"><br>
+                        <button type="submit" class="btn btn-primary">ارسال</button>
+                    </form>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>action</code></td>
+                            <td>آدرس ارسال داده‌های فرم</td>
+                        </tr>
+                        <tr>
+                            <td><code>method</code></td>
+                            <td>روش ارسال (مثل <code>GET</code> یا <code>POST</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ input -->
+                <h4>تگ <code>&lt;input&gt;</code></h4>
+                <p>برای دریافت ورودی از کاربر در فرم‌ها استفاده می‌شود.</p>
+                <div class="example-code">
+                    <input type="text" placeholder="نام خود را وارد کنید"><br>
+                    <input type="email" placeholder="ایمیل خود را وارد کنید">
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <input type="text" placeholder="نام خود را وارد کنید" class="form-control mb-2"><br>
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="form-control">
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>type</code></td>
+                            <td>نوع ورودی (مثل <code>text</code>، <code>email</code>، <code>password</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>placeholder</code></td>
+                            <td>متن پیشنهادی داخل ورودی</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ button -->
+                <h4>تگ <code>&lt;button&gt;</code></h4>
+                <p>برای ایجاد دکمه‌های تعاملی استفاده می‌شود.</p>
+                <div class="example-code">
+                    <button type="button">کلیک کنید</button>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <button type="button" class="btn btn-primary">کلیک کنید</button>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>type</code></td>
+                            <td>نوع دکمه (مثل <code>button</code>، <code>submit</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>onclick</code></td>
+                            <td>رویداد کلیک (برای JavaScript)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ span -->
+                <h4>تگ <code>&lt;span&gt;</code></h4>
+                <p>برای استایل‌دهی یا گروه‌بندی بخش کوچکی از متن استفاده می‌شود.</p>
+                <div class="example-code">
+                    <p>این یک متن <span style="color: red;">قرمز</span> است.</p>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <p>این یک متن <span class="text-danger">قرمز</span> است.</p>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                        <tr>
+                            <td><code>style</code></td>
+                            <td>استایل مستقیم</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ header -->
+                <h4>تگ <code>&lt;header&gt;</code></h4>
+                <p>برای تعریف سرصفحه یا بخش معرفی صفحه استفاده می‌شود.</p>
+                <div class="example-code">
+                    <header><br>
+                      <h1>سرصفحه سایت</h1><br>
+                    </header>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <header>
+                        <h1>سرصفحه سایت</h1>
+                    </header>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ section -->
+                <h4>تگ <code>&lt;section&gt;</code></h4>
+                <p>برای تعریف بخش‌های مستقل محتوا استفاده می‌شود.</p>
+                <div class="example-code">
+                    <section><br>
+                      <h2>بخش محتوا</h2><br>
+                      <p>این یک بخش است.</p><br>
+                    </section>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <section>
+                        <h2>بخش محتوا</h2>
+                        <p>این یک بخش است.</p>
+                    </section>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- تگ article -->
+                <h4>تگ <code>&lt;article&gt;</code></h4>
+                <p>برای محتوای مستقل و خودکفا مثل مقاله یا پست استفاده می‌شود.</p>
+                <div class="example-code">
+                    <article><br>
+                      <h2>عنوان مقاله</h2><br>
+                      <p>محتوای مقاله...</p><br>
+                    </article>
+                </div>
+                <div class="border p-2 bg-light rounded">
+                    <article>
+                        <h2>عنوان مقاله</h2>
+                        <p>محتوای مقاله...</p>
+                    </article>
+                </div>
+                <h5>ویژگی‌ها:</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ویژگی</th>
+                            <th>توضیح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>شناسه یکتا</td>
+                        </tr>
+                        <tr>
+                            <td><code>class</code></td>
+                            <td>کلاس برای استایل‌دهی</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- بخش تگ‌های منسوخ‌شده -->
+        <div id="deprecated" class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">تگ‌های منسوخ‌شده HTML</h2>
+                <p>برخی تگ‌های HTML در نسخه‌های قدیمی‌تر استفاده می‌شدند اما در HTML5 منسوخ شده‌اند، چون با CSS بهتر می‌توان همان کار را انجام داد. چند مثال:</p>
+                <div class="alert alert-danger">
+                    <h4>تگ <code>&lt;center&gt;</code></h4>
+                    <p>برای وسط‌چین کردن محتوا استفاده می‌شد. اکنون از <code>text-align: center</code> در CSS استفاده کنید.</p>
+                    <div class="example-code">
+                        <center>متن وسط‌چین</center>
+                    </div>
+                    <div class="border p-2 bg-light rounded">
+                        <p class="text-center">متن وسط‌چین</p>
+                    </div>
+                </div>
+                <div class="alert alert-danger">
+                    <h4>تگ <code>&lt;font&gt;</code></h4>
+                    <p>برای تنظیم فونت و رنگ متن استفاده می‌شد. اکنون از CSS (<code>font-family</code>، <code>color</code>) استفاده کنید.</p>
+                    <div class="example-code">
+                        <font color="red">متن قرمز</font>
+                    </div>
+                    <div class="border p-2 bg-light rounded">
+                        <span class="text-danger">متن قرمز</span>
+                    </div>
+                </div>
+                <div class="alert alert-danger">
+                    <h4>تگ <code>&lt;marquee&gt;</code></h4>
+                    <p>برای ایجاد متن متحرک استفاده می‌شد. اکنون از انیمیشن‌های CSS استفاده کنید.</p>
+                    <div class="example-code">
+                        <marquee>متن متحرک</marquee>
+                    </div>
+                    <div class="border p-2 bg-light rounded">
+                        <p class="text-primary">متن متحرک (با CSS)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
